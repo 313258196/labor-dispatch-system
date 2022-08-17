@@ -1,0 +1,32 @@
+.layui-nav-child{
+	z-index: 9999;
+}
+
+.container .layui-nav .layui-nav-item a:not(.sub-menu-item) {
+	line-height: 1;
+	height: 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.container .layui-nav .layui-nav-item .nav-title {
+	line-height: 1.4;
+	margin-top: 2px;
+	color: #fff;
+}
+.container .logo a{
+	color: #fff;
+}
+
+#side-nav .nav:not(.nav-active){
+	display: none;
+}
+
+.layui-nav-tree{
+	width: initial;
+}
+.layui-nav{
+	background-color: #eee;
+}

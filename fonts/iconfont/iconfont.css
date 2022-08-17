@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3364732 */
+  src: url('iconfont.woff2?t=1660532399707') format('woff2'),
+       url('iconfont.woff?t=1660532399707') format('woff'),
+       url('iconfont.ttf?t=1660532399707') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e6a9";
+}
+
+.icon-money:before {
+  content: "\e641";
+}
+
+.icon-ticket_money_fill:before {
+  content: "\e816";
+}
+
+.icon-ant-cloud:before {
+  content: "\e94f";
+}
+
+.icon-building-fill:before {
+  content: "\e602";
+}
+
+.icon-servicefill:before {
+  content: "\e737";
+}
+
+.icon-building:before {
+  content: "\e8b9";
+}
+
+.icon-people:before {
+  content: "\e70f";
+}
+
+.icon-moneycollect-fill:before {
+  content: "\e863";
+}
+
+.icon-insurance-fill:before {
+  content: "\eacf";
+}
+
+.icon-public_welfare:before {
+  content: "\e65e";
+}
+
+.icon-home-fill:before {
+  content: "\e867";
+}
+
+.icon-xiaopangchetupianjiazaishibai:before {
+  content: "\e60d";
+}
+
+.icon-jianli:before {
+  content: "\e6b2";
+}
+
+.icon-wodejianli:before {
+  content: "\e67b";
+}
+
+.icon-img1:before {
+  content: "\e61b";
+}
+
+.icon-wechat:before {
+  content: "\e616";
+}
+
+.icon-dianhua:before {
+  content: "\eb23";
+}
+
+.icon-QQ:before {
+  content: "\e882";
+}
+

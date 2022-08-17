@@ -1,0 +1,117 @@
+/* 本期营业简报 */
+.report-block .layui-card-body{
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.report-block .layui-card-body .card-body-left{
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.report-block .layui-card-body .card-body-left .card-body-left-i{
+	width: 50%;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 60px 0;
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+}
+.report-block .layui-card-body .card-body-left .card-body-left-i.last{
+	border-bottom: none;
+}
+.report-block .layui-card-body .card-body-left .card-body-left-i .money-block{
+	font-size: 24px;
+	color: #fd7240;
+}
+.report-block .layui-card-body .card-body-left .card-body-left-i .tip-block{
+	font-weight: 700;
+	margin: 6px 0;
+}
+.report-block .layui-card-body .card-body-left .card-body-left-i .tip-block i{
+	font-weight: normal;
+	color: #FFB800;
+}
+.report-block .layui-card-body .card-body-left .card-body-left-i .desc-block{
+	margin: 6px 0;
+	color: #C2C2C2;
+}
+.report-block .layui-card-body .card-body-right{
+	width: 50%;
+	height: 424px;
+}
+
+/* 数据概览 */
+.data-preview-block{
+	display: flex;
+	justify-content: space-between;
+}
+.data-preview-block .data-preview-left{
+	width: 70%;
+	margin-bottom: 0;
+}
+.data-preview-block .data-preview-left .layui-card-body{
+	padding: 0;
+}
+.data-preview-block .data-preview-left .layui-card-body .item-i-block{
+	display: flex;
+	flex-wrap: wrap;
+}
+.data-preview-block .data-preview-left .layui-card-body .item-i-block .item-i{
+	flex: 1;
+	padding: 20px 0;
+	text-align: center;
+	box-sizing: border-box;
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	cursor: pointer;
+}
+.data-preview-block .data-preview-left .layui-card-body .item-i-block .item-i:hover{
+	background-color: #FAFAFA;
+}
+.data-preview-block .data-preview-left .layui-card-body .item-i-block.item-i-second-line .item-i{
+	border-bottom: none;
+}
+.data-preview-block .data-preview-left .layui-card-body .item-i-block .item-i i{
+	color: #C2C2C2;
+	font-size: 28px;
+}
+.data-preview-block .data-preview-left .layui-card-body .item-i-block .item-i .item-i-num{
+	color: #009688;
+	font-size: 18px;
+	margin-top: 4px;
+}
+.data-preview-block .data-preview-left .layui-card-body .item-i-block .item-i .unit{
+	font-size: 14px;
+}
+.data-preview-block .data-preview-right{
+	width: 30%;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.data-preview-block .data-preview-right .data-preview-right-main{
+	height: 100%;
+	background-color: #fff;
+}
+.data-preview-block .data-preview-right .layui-tab{
+	margin: 0;
+}
+.data-preview-block .data-preview-right .preview-right-ul li{
+	width: 100%;
+	line-height: 2;
+	
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all;
+}
+.data-preview-block .data-preview-right .preview-right-ul .alink:hover{
+	text-decoration: underline;
+	color: #009688;
+}
+.data-preview-block .data-preview-right .preview-right-item-icon{
+	margin-right: 4px;
+	color: #FFB800;
+	position: relative;
+	top: 1px;
+}

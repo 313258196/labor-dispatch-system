@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎页面-X-admin2.2</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+		<link rel="stylesheet" href="../../css/font.css">
+		<link rel="stylesheet" href="../../css/xadmin.css">
+		<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/xadmin.js"></script>
+		<!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <style>
+            .layui-table-view{
+                margin-top: 0;
+            }
+        </style>
+	</head>
+
+	<body>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+
+                    <div class="layui-card card-block">
+                        <div class="layui-card-header df bet">
+                            <div class="title">员工档案</div>
+                            <div>
+                                <div class="layui-input-inline">
+                                    <button type="button" class="layui-btn" onclick="xadmin.open('员工创建 - ','../subModules/staffAdd.html')">
+                                        <i class="layui-icon layui-icon-username layui-font-12"></i>
+                                        创建
+                                    </button>
+                                </div>
+                                <div class="layui-input-inline">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-border-green">
+                                        更多操作
+                                        <i class="layui-icon layui-icon-down layui-font-12"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-card-body">
+
+                            <div class="filter-block">
+                                <form class="layui-form layui-col-md12 layui-form-pane">
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">客户公司</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="客户公司名称" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">基本信息</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="编号/姓名/证件号码/电话" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">员工状态</label>
+                                        <div class="layui-input-inline">
+                                            <select name="province" lay-filter="province">
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">服务类型</label>
+                                        <div class="layui-input-inline">
+                                            <select name="province" lay-filter="province">
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">服务专员</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="服务专员" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">关联人</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="关联人" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i>搜索</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="layui-card card-block">
+                        <table id="ly-table" lay-filter="ly-table"></table>
+                    </div>
+
+                </div>
+            </div>
+
+            <script type="text/html" id="operationEl">
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn layui-btn-xs" lay-event="detail" onclick="xadmin.open('员工详情 - ','../subModules/staffDetail.html')">详情</button>
+                </div>
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">解除</button>
+                </div>
+            </script>
+
+		</div>
+
+        <script>
+            layui.use(['form','table'], function(){
+				var element = layui.element;
+                var table = layui.table;
+
+                //第一个实例
+                table.render({
+                    elem: '#ly-table'
+                    ,height: 312
+                    ,url: './staffManagement.json'
+                    ,page: true 
+                    ,cols: [[ 
+                        { field: '', title: 'ID', width: 80, type:'checkbox', sort: true, fixed: 'left' },
+                        { field: 'id', title: '员工编号' },
+                        { field: 'id', title: '员工姓名' },
+                        { field: 'id', title: '证件号码' },
+                        { field: 'id', title: '手机号码' },
+                        { field: 'id', title: '采集来源客户' },
+                        { field: 'id', title: '所属部门' },
+                        { field: 'id', title: '签约到期时间' },
+                        { field: 'id', title: '入职时间' },
+                        { field: 'id', title: '社保' },
+                        { field: 'id', title: '公积金' },
+                        { field: 'id', title: '商保' },
+                        { field: 'id', title: '操作', width: 150, fixed: 'right', templet: '#operationEl' },
+                    ]]
+                });
+
+			});
+        </script>
+
+	</body>
+
+</html>

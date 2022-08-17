@@ -1,0 +1,142 @@
+{
+  "id": "3364732",
+  "name": "zy",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "646600",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e6a9",
+      "unicode_decimal": 59049
+    },
+    {
+      "icon_id": "1138739",
+      "name": "money",
+      "font_class": "money",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "4930641",
+      "name": "ticket_money_fill",
+      "font_class": "ticket_money_fill",
+      "unicode": "e816",
+      "unicode_decimal": 59414
+    },
+    {
+      "icon_id": "29391711",
+      "name": "ant-cloud",
+      "font_class": "ant-cloud",
+      "unicode": "e94f",
+      "unicode_decimal": 59727
+    },
+    {
+      "icon_id": "12001899",
+      "name": "building-fill",
+      "font_class": "building-fill",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "158877",
+      "name": "service_fill",
+      "font_class": "servicefill",
+      "unicode": "e737",
+      "unicode_decimal": 59191
+    },
+    {
+      "icon_id": "924328",
+      "name": "building",
+      "font_class": "building",
+      "unicode": "e8b9",
+      "unicode_decimal": 59577
+    },
+    {
+      "icon_id": "1393721",
+      "name": "people",
+      "font_class": "people",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "4936640",
+      "name": "money collect-fill",
+      "font_class": "moneycollect-fill",
+      "unicode": "e863",
+      "unicode_decimal": 59491
+    },
+    {
+      "icon_id": "19451147",
+      "name": "保险",
+      "font_class": "insurance-fill",
+      "unicode": "eacf",
+      "unicode_decimal": 60111
+    },
+    {
+      "icon_id": "23816375",
+      "name": "public_welfare",
+      "font_class": "public_welfare",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "4936656",
+      "name": "home-fill",
+      "font_class": "home-fill",
+      "unicode": "e867",
+      "unicode_decimal": 59495
+    },
+    {
+      "icon_id": "18736900",
+      "name": "小胖车图片加载失败",
+      "font_class": "xiaopangchetupianjiazaishibai",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "1879376",
+      "name": "简历",
+      "font_class": "jianli",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
+    },
+    {
+      "icon_id": "9599344",
+      "name": "我的简历",
+      "font_class": "wodejianli",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "13990910",
+      "name": "img",
+      "font_class": "img1",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "6231095",
+      "name": "wechat",
+      "font_class": "wechat",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "5387648",
+      "name": "电话",
+      "font_class": "dianhua",
+      "unicode": "eb23",
+      "unicode_decimal": 60195
+    },
+    {
+      "icon_id": "4936984",
+      "name": "QQ",
+      "font_class": "QQ",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    }
+  ]
+}

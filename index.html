@@ -1,0 +1,485 @@
+<!doctype html>
+<html class="x-admin-sm">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卓越SASS云平台</title>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./fonts/iconfont/iconfont.css">
+		<link rel="stylesheet" href="./css/xadmin.css">
+		<link rel="stylesheet" href="./css/index.css">
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./lib/layui/layui.js"></script>
+		<script type="text/javascript" src="./js/xadmin.js"></script>
+		<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+		<!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+		<script>
+			// 是否开启刷新记忆tab功能
+			var is_remember = true;
+		</script>
+	</head>
+
+	<body class="index">
+		<!-- 顶部开始 -->
+		<div class="container">
+			<div class="logo">
+				<a href="./index.html"><i class="iconfont icon-ant-cloud" style="font-size: 34px; color: #fff;"></i>卓越SASS云平台</a>
+			</div>
+			<div class="left_open">
+				<a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
+			</div>
+			<ul class="layui-nav left fast-add" lay-filter="modulesNav">
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" data-value="index">
+                        <i class="iconfont icon-home-fill" style="font-size: 24px; color: #fff;"></i>
+                        <div class="nav nav-title">首页</div>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" data-value="customer">
+                        <i class="iconfont icon-building-fill" style="font-size: 24px; color: #fff;"></i>
+                        <div class="nav nav-title">客户中心</div>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" data-value="staff">
+                        <i class="iconfont icon-people" style="font-size: 24px; color: #fff;"></i>
+                        <div class="nav nav-title">员工中心</div>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" data-value="service">
+                        <i class="iconfont icon-servicefill" style="font-size: 24px; color: #fff;"></i>
+                        <div class="nav nav-title">服务中心</div>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" data-value="settlement">
+                        <i class="iconfont icon-moneycollect-fill" style="font-size: 24px; color: #fff;"></i>
+                        <div class="nav nav-title">结算中心</div>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" data-value="business">
+                        <i class="iconfont icon-insurance-fill" style="font-size: 24px; color: #fff;"></i>
+                        <div class="nav nav-title">商业保险</div>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" data-value="welfare">
+                        <i class="iconfont icon-public_welfare" style="font-size: 24px; color: #fff;"></i>
+                        <div class="nav nav-title">福利中心</div>
+                    </a>
+                </li>
+			</ul>
+			<ul class="layui-nav right" lay-filter="">
+				<li class="layui-nav-item">
+					<a href="javascript:;">admin</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a class="sub-menu-item" onclick="xadmin.open('个人信息','http://www.baidu.com')">个人信息</a>
+						</dd>
+						<dd>
+							<a class="sub-menu-item" onclick="xadmin.open('切换帐号','http://www.baidu.com')">切换帐号</a>
+						</dd>
+						<dd>
+							<a class="sub-menu-item" href="./login.html">退出</a>
+						</dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item to-index">
+					<a href="/">前台首页</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 顶部结束 -->
+		<!-- 中部开始 -->
+		<!-- 左侧菜单开始 -->
+		<div class="left-nav">
+			<div id="side-nav">
+				<ul id="nav" class="layui-nav layui-nav-tree nav nav-index nav-active" lay-filter="nav-filter-menu">
+					<li class="layui-nav-item layui-this" lay-id="nav-lay-0">
+						<a href="javascript:;" class="active" data-sign="indexPage" data-page="welcome.html">
+							<i class="iconfont left-nav-li" lay-tips="首页">&#xe6a9;</i>
+							<cite>首页</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item" lay-id="nav-lay-1">
+						<a href="javascript:;" data-page="./pages/index/staffManagement.html">
+							<i class="iconfont left-nav-li" lay-tips="员工管理">&#xe6b8;</i>
+							<cite>员工管理</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" data-page="./pages/index/customerManagement.html">
+							<i class="iconfont left-nav-li" lay-tips="客户管理">&#xe726;</i>
+							<cite>客户管理</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" data-page="./pages/index/moduleOfSocialSecurity.html">
+							<i class="iconfont left-nav-li" lay-tips="社保缴纳套餐模板">&#xe723;</i>
+							<cite>社保缴纳套餐模板</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" data-page="./pages/index/settlementAccount.html">
+							<i class="iconfont left-nav-li" lay-tips="结算帐台">&#xe723;</i>
+							<cite>结算帐台</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" data-page="./pages/index/collectionQuery.html">
+							<i class="iconfont left-nav-li" lay-tips="回款查询">&#xe70c;</i>
+							<cite>回款查询</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="社保计算器">&#xe812;</i>
+							<cite>社保计算器</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="个税计算器">&#xe6fb;</i>
+							<cite>个税计算器</cite>
+						</a>
+					</li>
+				</ul>
+
+				<ul id="nav" class="layui-nav layui-nav-tree nav nav-customer" lay-filter="nav-filter-menu">
+					<li class="layui-nav-item layui-this">
+						<a href="javascript:;" class="active">
+							<i class="iconfont left-nav-li" lay-tips="客户档案列表">&#xe6f5;</i>
+							<cite>客户档案列表</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="集团客户管理">&#xe6ce;</i>
+							<cite>集团客户管理</cite>
+						</a>
+					</li>
+				</ul>
+
+				<ul id="nav" class="layui-nav layui-nav-tree nav nav-staff">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="员工档案列表">&#xe753;</i>
+							<cite>员工档案列表</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="员工离职库">&#xe724;</i>
+							<cite>员工离职库</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="预离职名册">&#xe6f3;</i>
+							<cite>预离职名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="签约备案">&#xe74e;</i>
+							<cite>签约备案</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="累计专项附加扣除">&#xe744;</i>
+							<cite>累计专项附加扣除</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="员工个税">&#xe758;</i>
+							<cite>员工个税</cite>
+						</a>
+					</li>
+				</ul>
+
+				<ul id="nav" class="layui-nav layui-nav-tree nav nav-service">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="服务列表">&#xe6a2;</i>
+							<cite>服务列表</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="企业增减员">&#xe6ab;</i>
+							<cite>企业增减员</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="预增减名册">&#xe6fa;</i>
+							<cite>预增减名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="历史服务记录">&#xe744;</i>
+							<cite>历史服务记录</cite>
+						</a>
+					</li>
+				</ul>
+
+				<ul id="nav" class="layui-nav layui-nav-tree nav nav-settlement">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="结算帐台">&#xe744;</i>
+							<cite>结算帐台</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="私有结算模板">&#xe6a2;</i>
+							<cite>私有结算模板</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="多维度统计">&#xe74c;</i>
+							<cite>多维度统计</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="回款计划">&#xe6ab;</i>
+							<cite>回款计划</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="薪酬发放帐台">&#xe6e5;</i>
+							<cite>薪酬发放帐台</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="私有薪酬模板">&#xe723;</i>
+							<cite>私有薪酬模板</cite>
+						</a>
+					</li>
+				</ul>
+
+				<ul id="nav" class="layui-nav layui-nav-tree nav nav-business">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="新增名册">&#xe6fa;</i>
+							<cite>新增名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="已投保名册">&#xe6fb;</i>
+							<cite>已投保名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="减员名册">&#xe70b;</i>
+							<cite>减员名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="已停保名册">&#xe724;</i>
+							<cite>已停保名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="回收站">&#xe6e8;</i>
+							<cite>回收站</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="商保产品列表">&#xe6b5;</i>
+							<cite>商保产品列表</cite>
+						</a>
+					</li>
+				</ul>
+
+				<ul id="nav" class="layui-nav layui-nav-tree nav nav-welfare">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="待增员/变更名册">&#xe6fa;</i>
+							<cite>待增员/变更名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="待减员名册">&#xe724;</i>
+							<cite>待减员名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="已申报名册">&#xe749;</i>
+							<cite>已申报名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="停保名册">&#xe744;</i>
+							<cite>停保名册</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="增员/变更审核">&#xe6c7;</i>
+							<cite>增员/变更审核</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="减员审核">&#xe6c7;</i>
+							<cite>减员审核</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="日志记录">&#xe6bf;</i>
+							<cite>日志记录</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="社保公积金台账">&#xe6c5;</i>
+							<cite>社保公积金台账</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="社保公积金政策模板">&#xe6fc;</i>
+							<cite>社保公积金政策模板</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="按员工查询">&#xe726;</i>
+							<cite>按员工查询</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="iconfont left-nav-li" lay-tips="年度汇总">&#xe6ce;</i>
+							<cite>年度汇总</cite>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<!-- <div class="x-slide_left"></div> -->
+		<!-- 左侧菜单结束 -->
+		<!-- 右侧主体开始 -->
+		<div class="page-content">
+			<div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+				<ul class="layui-tab-title">
+					<li class="home" lay-id="lay-id-index">
+						<i class="layui-icon">&#xe68e;</i>首页
+					</li>
+				</ul>
+				<div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
+					<dl>
+						<dd data-type="this">关闭当前</dd>
+						<dd data-type="other">关闭其它</dd>
+						<dd data-type="all">关闭全部</dd>
+					</dl>
+				</div>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">
+						<iframe src='./welcome.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+					</div>
+				</div>
+				<div id="tab_show"></div>
+			</div>
+		</div>
+		<div class="page-content-bg"></div>
+		<style id="theme_style"></style>
+		<!-- 右侧主体结束 -->
+		<!-- 中部结束 -->
+		<script>
+			//百度统计可去掉
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+		<script>
+			var currentModule = {
+				value:"index",
+				index:0
+			}
+
+			layui.use('element', function(){
+				var element = layui.element;
+				
+				// 头部导航栏切换
+				element.on('nav(modulesNav)', function(elem){
+					const value = elem[0].dataset.value;
+					if(currentModule.value === value){ return }
+					currentModule = {
+						value,
+						// index
+					};
+					
+					// 展示左边导航栏
+					$(".nav-" + value).siblings().removeClass("nav-active");
+					$(".nav-" + value).addClass("nav-active");
+
+					// 关闭所有内容页面tab
+					var tabtitle = $(".layui-tab-title li");
+					$.each(tabtitle, function (i) {
+						var _id = $(this).attr("lay-id");
+						element.tabDelete("xbs_tab",_id);
+					})
+
+					// 默认打开 左边导航栏 第一个导航页面
+					xadmin.add_tab($(".nav-" + value + " cite")[0].innerText,$(".nav-" + value + " a")[0].dataset.page);
+				});
+
+				// 左边导航栏 切换
+				element.on('nav(nav-filter-menu)', function(elem){
+					var { sign, page } = elem[0].dataset;
+					if(sign === "indexPage"){
+						element.tabChange('xbs_tab', 'lay-id-index'); 
+						return;
+					}
+
+					xadmin.add_tab(elem.find("cite")[0].innerText, page);
+				});
+
+				// element.on('tab(xbs_tab)', function(data){
+				// 	console.log(this); //当前Tab标题所在的原始DOM元素
+				// 	console.log(data.index); //得到当前Tab的所在下标
+				// 	console.log(data.elem); //得到当前的Tab大容器
+
+				// 	console.log($("#nav li").eq(data.index).attr("lay-id")); //得到当前的Tab大容器
+
+				// 	element.tabChange("nav-filter-menu", $("#nav li").eq(data.index).attr("lay-id"));
+				// });
+			});
+		</script>
+	</body>
+
+</html>

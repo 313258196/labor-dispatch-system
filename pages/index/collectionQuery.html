@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎页面-X-admin2.2</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+		<link rel="stylesheet" href="../../css/font.css">
+		<link rel="stylesheet" href="../../css/xadmin.css">
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/xadmin.js"></script>
+		<!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <style>
+            .layui-table-view{
+                margin-top: 0;
+            }
+            .layui-btn.inb{
+                display: inline-block;
+            }
+        </style>
+	</head>
+
+	<body>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+
+                    <div class="layui-card card-block">
+                        <div class="layui-card-header df bet">
+                            <div class="title">回款查询</div>
+                            <div>
+                                <div class="layui-input-inline">
+                                    <button type="button" class="layui-btn" onclick="addCollectionFn()">
+                                        <i class="layui-icon layui-icon-dollar layui-font-12"></i>
+                                        创建回款
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-card-body">
+
+                            <div class="filter-block">
+                                <form class="layui-form layui-col-md12 layui-form-pane">
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">到账金额</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="请输入到账金额" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">账单月份</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="请输入账单月份" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">关键词</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="客户名称/账单编号/签约主体" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">服务专员</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="请输入服务专员" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">备注</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="请输入人事服务备注" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">账单废除</label>
+                                        <div class="layui-input-inline">
+                                            <select name="province" lay-filter="province">
+                                                <option value="">请选择账单废除</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">回款状态</label>
+                                        <div class="layui-input-inline">
+                                            <select name="province" lay-filter="province">
+                                                <option value="">请选择回款状态</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">计划来源</label>
+                                        <div class="layui-input-inline">
+                                            <select name="province" lay-filter="province">
+                                                <option value="">请选择计划来源</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">最近回款日</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="请输入最近回款日" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">回款计划ID</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="请输入回款计划ID" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">付款账号</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="title" required lay-verify="required" placeholder="请输入付款账号" autocomplete="off" class="layui-input" />
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">开票状态</label>
+                                        <div class="layui-input-inline">
+                                            <select name="province" lay-filter="province">
+                                                <option value="">请选择开票状态</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">合并开票</label>
+                                        <div class="layui-input-inline">
+                                            <select name="province" lay-filter="province">
+                                                <option value="">请选择合并开票</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <label class="layui-form-label">发票提交状态</label>
+                                        <div class="layui-input-inline">
+                                            <select name="province" lay-filter="province">
+                                                <option value="">请选择发票提交状态</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <button class="layui-btn inb" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i>搜索</button>
+                                        <button type="reset" class="layui-btn layui-btn-primary inb"><i class="layui-icon">&#xe669;</i>重置</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="layui-card card-block">
+                        <table id="ly-table" lay-filter="ly-table"></table>
+                    </div>
+
+                </div>
+            </div>
+
+		</div>
+
+        <script type="text/html" id="createPlanEl">
+            <div style="padding: 20px;box-sizing:border-box">
+                <form class="layui-form layui-form-pane" lay-filter="collectionPlan">
+                    <div class="layui-row layui-col-space10">
+                        <div class="ly-left layui-col-md12">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">客户名称</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" id="date-graduation" placeholder="请选择客户名称" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ly-left layui-col-md12">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">账单来源</label>
+                                <div class="layui-input-inline">
+                                    <select name="province" lay-filter="province">
+                                        <option value="">请选择账单来源</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ly-left layui-col-md12">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">应到账金额</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title" required lay-verify="required" placeholder="请输入应到账金额" autocomplete="off" class="layui-input" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ly-left layui-col-md12">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">账单月份</label>
+                                <div class="layui-input-inline">
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input" id="date-bill" placeholder="请选择账单月份" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ly-left layui-col-md12">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">签约主体</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title" required lay-verify="required" placeholder="请输入签约主体" autocomplete="off" class="layui-input" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ly-left layui-col-md12">
+                            <div class="layui-form-item">
+                                <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#x1005;</i>保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </script>
+
+        <script>
+            function addCollectionFn(){
+                layer.open({
+                    title:"创建回款计划",
+                    type: 1,
+                    content: $('#createPlanEl').html()
+                });
+
+                var form = layui.form;
+                var laydate = layui.laydate;
+                form.render(null, 'collectionPlan');
+
+				[
+					'date-bill',
+				].forEach(item => {
+					laydate.render({
+						elem: '#' + item
+					});
+				})
+            }
+            
+            layui.use(['form','table','laydate'], function(){
+				var element = layui.element;
+                var table = layui.table;
+
+                //第一个实例
+                table.render({
+                    elem: '#ly-table'
+                    ,height: 312
+                    ,url: './staffManagement.json'
+                    ,page: true 
+                    ,cols: [[ 
+                        { field: 'id', title: '回款计划ID' },
+                        { field: 'id', title: '账单编号' },
+                        { field: 'id', title: '客户名称' },
+                        { field: 'id', title: '服务专员' },
+                        { field: 'id', title: '账单来源' },
+                        { field: 'id', title: '账单月份' },
+                        { field: 'id', title: '应到账金额' },
+                        { field: 'id', title: '实际到账' },
+                        { field: 'id', title: '未到账金额' },
+                        { field: 'id', title: '开票状态' },
+                        { field: 'id', title: '计划来源' },
+                        { field: 'id', title: '最近回款时间' },
+                        { field: 'id', title: '人事服务备注' },
+                        { field: 'id', title: '签约主体' },
+                    ]]
+                });
+
+			});
+        </script>
+
+	</body>
+
+</html>

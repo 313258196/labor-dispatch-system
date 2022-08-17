@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎页面-X-admin2.2</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+		<link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./fonts/iconfont/iconfont.css">
+		<link rel="stylesheet" href="./css/xadmin.css">
+		<link rel="stylesheet" href="./css/welcome.css">
+		<script src="./js/jquery.min.js" charset="utf-8"></script>
+		<script src="./lib/layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="./js/xadmin.js"></script>
+        <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+		<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+		<!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+	</head>
+
+	<body>
+		<div class="layui-fluid">
+			<div class="layui-row layui-col-space15">
+
+                <!-- 本期营业简报 -->
+				<div class="layui-col-md12 report-block card-block">
+					<div class="layui-card">
+						<div class="layui-card-header">
+                            <form class="layui-form layui-col-space5">
+                                <div class="layui-input-inline layui-show-xs-block title">
+                                    本期营业简报
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block"  style="width:150px;margin-top:-2px">
+                                    <select name="contrller">
+                                        <option>202208</option>
+                                        <option>202207</option>
+                                        <option>202206</option>
+                                        <option>202205</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+						<div class="layui-card-body">
+                            <div class="card-body-left">
+                                <div class="card-body-left-i">
+                                    <div class="money-block">￥0</div>
+                                    <div class="tip-block">
+                                        <i class="iconfont icon-ticket_money_fill"></i>
+                                        未到账金额
+                                    </div>
+                                    <div class="desc-block">来自 0笔结算账单</div>
+                                </div>
+                                <div class="card-body-left-i">
+                                    <div class="money-block">￥0</div>
+                                    <div class="tip-block">
+                                        <i class="iconfont icon-ticket_money_fill"></i>
+                                        营业总金额
+                                    </div>
+                                    <div class="desc-block">来自 0笔结算账单</div>
+                                </div>
+                                <div class="card-body-left-i last">
+                                    <div class="money-block">￥0</div>
+                                    <div class="tip-block">
+                                        <i class="iconfont icon-moneycollect-fill"></i>
+                                        已到账金额
+                                    </div>
+                                    <div class="desc-block">来自 0笔结算账单</div>
+                                </div>
+                                <div class="card-body-left-i last">
+                                    <div class="money-block">￥0</div>
+                                    <div class="tip-block">
+                                        <i class="iconfont icon-money"></i>
+                                        服务费金额
+                                    </div>
+                                    <div class="desc-block">来自 0笔结算账单</div>
+                                </div>
+                            </div>
+                            <div class="card-body-right" id="card-body-right"></div>
+						</div>
+					</div>
+				</div>
+
+                <!-- 数据概览 -->
+                <div class="data-preview-block card-block">
+                    <div class="layui-card data-preview-i data-preview-left">
+						<div class="layui-card-header">
+                            <div class="title">
+                                数据概览
+                            </div>
+                        </div>
+						<div class="layui-card-body">
+                            <div class="item-i-block item-i-first-line">
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe6ab;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">签约客户</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe6f5;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">签约员工</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe6c7;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">劳务派遣员工</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe83b;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">岗位外包员工</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe723;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">社保代理员工</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe758;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">薪酬代发员工</div>
+                                </div>
+                            </div>
+                            <div class="item-i-block item-i-second-line">
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe6bb;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">客户60天内到期</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe70b;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">员工30天内到期</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe726;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">30天内退休（男）</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe728;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">30天内退休（女）</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe724;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">服务10天内到期</div>
+                                </div>
+                                <div class="item-i">
+                                    <i title="" class="iconfont preview-right-item-icon">&#xe74a;</i>
+                                    <div class="item-i-num">1<span class="unit">个</span></div>
+                                    <div class="item-i-label">服务待确认</div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+                    <div class="data-preview-i data-preview-right">
+                        <div class="data-preview-right-main">
+                            <div class="layui-tab">
+                                <ul class="layui-tab-title">
+                                    <li class="layui-this">历史操作</li>
+                                    <li>消息事件</li>
+                                </ul>
+                                <div class="layui-tab-content">
+                                    <div class="layui-tab-item layui-show">
+                                        <ul class="preview-right-ul">
+                                            <li>
+                                                <i title="" class="iconfont preview-right-item-icon">&#xe6f3;</i>
+                                                <a class="alink" href="#">
+                                                    通过对一个内联元素（一般推荐用 i标签）设定 class="layui-icon"，来定义一个图标，然后对元素加上图标对应的 font-class（注意：layui 2.3.0 之前只支持采用 unicode 字符)，即可显示出你想要的图标，譬如：
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <i title="" class="iconfont preview-right-item-icon">&#xe6f3;</i>
+                                                <a class="alink" href="#">
+                                                    通过对一个内联元素（一般推荐用 i标签）设定 class="layui-icon"，来定义一个图标，然后对元素加上图标对应的 font-class（注意：layui 2.3.0 之前只支持采用 unicode 字符)，即可显示出你想要的图标，譬如：
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="layui-tab-item">
+                                        <ul class="preview-right-ul">
+                                            <li>
+                                                <i title="" class="iconfont preview-right-item-icon">&#xe6f3;</i>
+                                                <a class="alink" href="#">
+                                                    通过对一个内联元素（一般推荐用 i标签）设定 class="layui-icon"，来定义一个图标，然后对元素加上图标对应的 font-class（注意：layui 2.3.0 之前只支持采用 unicode 字符)，即可显示出你想要的图标，譬如：
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <i title="" class="iconfont preview-right-item-icon">&#xe6f3;</i>
+                                                <a class="alink" href="#">
+                                                    通过对一个内联元素（一般推荐用 i标签）设定 class="layui-icon"，来定义一个图标，然后对元素加上图标对应的 font-class（注意：layui 2.3.0 之前只支持采用 unicode 字符)，即可显示出你想要的图标，譬如：
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+                </div>
+				
+				<style id="welcome_style"></style>
+				<div class="layui-col-md12">
+					<blockquote class="layui-elem-quote layui-quote-nm">感谢layui,百度Echarts,jquery,本系统由x-admin提供技术支持。</blockquote>
+				</div>
+			</div>
+		</div>
+		</div>
+
+        <script>
+            layui.use(['form'],() => {
+                var form = layui.form;
+            });
+
+            // window.onload = () => {
+            //     setTimeout(() => {
+            //         initChart();
+            //     }, 1000);
+
+            //     document.addEventListener("visibilitychange",function() {
+            //         console.log(333,document.visibilityState)
+            //     })
+            // }
+
+            function initChart(){
+                console.log(222222222,document.body.offsetWidth)
+                // 基于准备好的dom，初始化echarts实例
+                var chartEl = document.getElementById('card-body-right');
+                console.log(111111,chartEl.clientWidth)
+                // chartEl.style.width = chartEl.offsetWidth + "px";
+                var myChart = echarts.init(chartEl);
+                // 指定图表的配置项和数据
+                var option = {
+                    title: {
+                        text: '折线图堆叠'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['周一','周二','周三','周四','周五','周六','周日']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [
+                        {
+                            name:'邮件营销',
+                            type:'line',
+                            stack: '总量',
+                            data:[120, 132, 101, 134, 90, 230, 210]
+                        },
+                        {
+                            name:'联盟广告',
+                            type:'line',
+                            stack: '总量',
+                            data:[220, 182, 191, 234, 290, 330, 310]
+                        },
+                        {
+                            name:'视频广告',
+                            type:'line',
+                            stack: '总量',
+                            data:[150, 232, 201, 154, 190, 330, 410]
+                        },
+                        {
+                            name:'直接访问',
+                            type:'line',
+                            stack: '总量',
+                            data:[320, 332, 301, 334, 390, 330, 320]
+                        },
+                        {
+                            name:'搜索引擎',
+                            type:'line',
+                            stack: '总量',
+                            data:[820, 932, 901, 934, 1290, 1330, 1320]
+                        }
+                    ]
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            }
+        </script>
+	</body>
+
+</html>
